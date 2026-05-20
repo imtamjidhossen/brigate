@@ -1,114 +1,337 @@
-@media (max-width: 768px) {
+/* Responsive Design for Tablet and Mobile */
 
+/* Large Screens (1200px and above) */
+@media (max-width: 1200px) {
+    .container {
+        width: 960px;
+    }
+}
+
+/* Medium Screens (992px to 1199px) */
+@media (max-width: 992px) {
+    .container {
+        width: 750px;
+    }
+
+    .sboxwraper,
+    .iconwraper,
+    .s2wraper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projectswraper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .slidercontent {
+        width: 100%;
+    }
+
+    .slidercontent h1 {
+        font-size: 40px;
+    }
+
+    .slidercontent p {
+        width: 100%;
+    }
+}
+
+/* Tablets (768px to 991px) */
+@media (max-width: 768px) {
     .container {
         width: 100%;
-        overflow: hidden;
+    }
+
+    /* Header adjustments */
+    .topbarWrapper {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .phone,
+    .email {
+        border: none;
+        padding: 5px 10px;
+        text-align: center;
+        width: auto;
+    }
+
+    .social {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .social a {
+        border: none;
+        padding: 10px;
+    }
+
+    /* Menu */
+    .mobileMenu {
+        display: block;
     }
 
     .menu {
-        width: 100%;
-        display: table;
-        background: #252525;
-        transform: scaleY(0);
-        transform-origin: top;
         display: none;
-        -webkit-transform: scaleY(0);
-        -moz-transform: scaleY(0);
-        -ms-transform: scaleY(0);
-        -o-transform: scaleY(0);
-
-
-    }
-
-    .ShowMenu {
+        position: absolute;
+        top: 70px;
+        right: 0;
         width: 100%;
-        background: #252525;
-        transform: scaleY(1);
-        transform-origin: top;
-        display: block !important;
-        -webkit-transform: scaleY(1);
-        -moz-transform: scaleY(1);
-        -ms-transform: scaleY(1);
-        -o-transform: scaleY(1);
-        transition: 1s;
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        -ms-transition: 1s;
-        -o-transition: 1s;
+        background: white;
+        flex-direction: column;
+        z-index: 99;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .topbarmain {
-        display: none;
-    }
-
-    .logo {
-        width: 100px;
-        float: left;
-    }
-
-    ul.MenuItem li {
-        float: initial;
+    .menu.ShowMenu {
+        display: flex;
     }
 
     ul.MenuItem {
-        float: none;
+        text-align: left;
+        width: 100%;
+        flex-direction: column;
     }
 
-    ul.MenuItem li a {
-        color: #f5f6f6;
-    }
-
-    ul.MenuItem li a {
-        padding: 8px;
+    ul.MenuItem li {
         display: block;
-        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid #f5f5f5;
     }
 
-    .MenuBar .container {
-        padding: 0px;
-    }
-
-    .menu ul li a {
-        border-bottom: 1px solid #9c9c9c;
+    ul.MenuItem li a {
+        padding: 15px 20px;
     }
 
     ul.submenu {
-        visibility: hidden;
-        transform: scaleY(0);
-        transform-origin: top;
+        position: static;
         width: 100%;
-        position: initial;
-        display: none;
-        background: #252525;
-        -webkit-transform: scaleY(0);
-        -moz-transform: scaleY(0);
-        -ms-transform: scaleY(0);
-        -o-transform: scaleY(0);
-    }
-
-    ul.ShowSubmenu {
-        visibility: visible;
         transform: scaleY(1);
-        transform-origin: top;
+        visibility: visible;
+        opacity: 0;
+        max-height: 0;
+        transition: all 0.3s;
+        padding: 0;
+        box-shadow: none;
+        border-top: none;
+    }
+
+    ul.submenu.ShowSubmenu {
+        opacity: 1;
+        max-height: 500px;
+        padding: 15px 0;
+    }
+
+    /* Slider */
+    .slidercontent {
         width: 100%;
-        position: initial;
-        display: block;
-        background: #252525;
-        -webkit-transform: scaleY(1);
-        -moz-transform: scaleY(1);
-        -ms-transform: scaleY(1);
-        -o-transform: scaleY(1);
+        padding: 20px;
     }
 
-    .mobileMenu {
-        float: right;
-        width: 50px;
-        margin-top: 20px;
-        display: block;
-        font-size: 25px;
-        cursor: pointer;
-        color: #fb5200;
-
+    .slidercontent h1 {
+        font-size: 32px;
+        margin-top: 60px;
     }
 
+    .slidercontent p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    #sliderbutton {
+        margin-bottom: 60px;
+    }
+
+    /* Services */
+    .sboxwraper,
+    .iconwraper,
+    .s2wraper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    /* Team section */
+    .workteamcontent {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .titledesc h2 {
+        font-size: 28px;
+    }
+
+    .workteamMenu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Ideas section */
+    .ideas {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .leftimg,
+    .rightcontent {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+    }
+
+    .rightcontent {
+        padding: 30px 20px;
+    }
+
+    .rContentTitle h1 {
+        font-size: 28px;
+    }
+
+    .rContentIcon {
+        grid-template-columns: 1fr;
+    }
+
+    /* Pricing */
+    .tablelist {
+        grid-template-columns: 1fr;
+    }
+
+    /* Team Grid */
+    .teamperson {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Projects Grid */
+    .projectswraper {
+        grid-template-columns: 1fr;
+    }
+
+    /* Newsletter */
+    .newslaterwraper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    section {
+        padding: 50px 15px;
+    }
+}
+
+/* Small Mobile Devices (480px to 767px) */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Logo */
+    .logo {
+        width: 120px;
+    }
+
+    /* Header */
+    .MenuBar {
+        padding: 10px 0;
+    }
+
+    .phone,
+    .email {
+        font-size: 12px;
+    }
+
+    /* Slider */
+    .slidercontent h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .slidercontent p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    #sliderbutton {
+        padding: 10px 30px;
+        font-size: 14px;
+        margin-bottom: 40px;
+        margin-top: 60px;
+    }
+
+    /* Service boxes */
+    .sboxTetle h2 {
+        font-size: 16px;
+    }
+
+    .sboxdisc p {
+        font-size: 13px;
+    }
+
+    /* Title */
+    .service2title h2 {
+        font-size: 28px;
+    }
+
+    .service2title p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    /* Team section */
+    .titledesc h2 {
+        font-size: 22px;
+    }
+
+    .workteamButton a {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    /* Ideas */
+    .rContentTitle h1 {
+        font-size: 22px;
+    }
+
+    .rContentIcon {
+        gap: 15px;
+    }
+
+    /* Pricing */
+    .singletable h3 {
+        font-size: 22px;
+    }
+
+    .singletable h2 {
+        font-size: 38px;
+    }
+
+    .tablebutton {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    /* Team Grid */
+    .teamperson {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .fboxwraper {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+}
+
+/* Extra Small Devices (Below 360px) */
+@media (max-width: 360px) {
+    .slidercontent h1 {
+        font-size: 20px;
+    }
+
+    .service2title h2 {
+        font-size: 24px;
+    }
 }
