@@ -40,58 +40,52 @@
 @media (max-width: 768px) {
     .container {
         width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     /* Header adjustments */
-    .topbarWrapper {
-        flex-direction: column;
-        gap: 10px;
+    .topbarmain {
+        display: none;
+    }
+
+    .MenuBarWraper {
+        position: relative;
         padding: 10px 0;
-    }
-
-    .phone,
-    .email {
-        border: none;
-        padding: 5px 10px;
-        text-align: center;
-        width: auto;
-    }
-
-    .social {
-        justify-content: center;
-        width: 100%;
-    }
-
-    .social a {
-        border: none;
-        padding: 10px;
     }
 
     /* Menu */
     .mobileMenu {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
     }
 
     .menu {
-        display: none;
-        position: absolute;
-        top: 70px;
-        right: 0;
+        position: fixed;
+        top: 60px;
+        left: 0;
         width: 100%;
+        max-height: 0;
         background: white;
         flex-direction: column;
         z-index: 99;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
     }
 
     .menu.ShowMenu {
-        display: flex;
+        max-height: 500px;
+        overflow-y: auto;
     }
 
     ul.MenuItem {
         text-align: left;
         width: 100%;
         flex-direction: column;
+        padding: 10px 0;
     }
 
     ul.MenuItem li {
@@ -102,25 +96,40 @@
 
     ul.MenuItem li a {
         padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     ul.submenu {
         position: static;
         width: 100%;
-        transform: scaleY(1);
+        background: #f9f9f9;
+        transform: none;
         visibility: visible;
         opacity: 0;
         max-height: 0;
-        transition: all 0.3s;
+        transition: all 0.3s ease;
         padding: 0;
         box-shadow: none;
         border-top: none;
+        overflow: hidden;
     }
 
     ul.submenu.ShowSubmenu {
         opacity: 1;
-        max-height: 500px;
-        padding: 15px 0;
+        max-height: 400px;
+        padding: 10px 0;
+    }
+
+    ul.submenu li a {
+        padding: 10px 40px;
+    }
+
+    /* Logo */
+    .logo {
+        width: 120px;
+        flex: 1;
     }
 
     /* Slider */
@@ -225,19 +234,18 @@
         padding-right: 10px;
     }
 
-    /* Logo */
-    .logo {
-        width: 120px;
-    }
-
     /* Header */
     .MenuBar {
         padding: 10px 0;
     }
 
-    .phone,
-    .email {
-        font-size: 12px;
+    .logo {
+        width: 100px;
+    }
+
+    .mobileMenu {
+        width: 40px;
+        height: 40px;
     }
 
     /* Slider */

@@ -1,16 +1,41 @@
 const mobileMenuBar = document.querySelector(".mobileMenu")
 const menuSubMenu = document.querySelectorAll(".dropdown")
+const menu = document.querySelector(".menu")
+const MenuBar = document.querySelector(".MenuBar")
 
+// Add chevron icons to dropdowns
 menuSubMenu.forEach(function(node) {
-    node.querySelector("a").innerHTML += '<i class="fas fa-chevron-down"></i>'
+    const link = node.querySelector("a")
+    // Check if chevron already exists
+    if (!link.querySelector('i.fa-chevron-down')) {
+        link.innerHTML += '<i class="fas fa-chevron-down"></i>'
+    }
+})
+
+// Mobile menu toggle
+mobileMenuBar.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    menu.classList.toggle("ShowMenu")
+})
+
+// Desktop dropdown menu
+menuSubMenu.forEach(function(node) {
     node.addEventListener("click", function(e) {
-        e.preventDefault();
-        this.querySelector(".submenu").classList.toggle("ShowSubmenu");
+        // Only toggle on mobile
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            e.stopPropagation();
+            this.querySelector(".submenu").classList.toggle("ShowSubmenu");
+        }
     })
 })
 
-mobileMenuBar.addEventListener("click", () => {
-    document.querySelector(".menu").classList.toggle("ShowMenu")
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.MenuBarWraper') && menu.classList.contains('ShowMenu')) {
+        menu.classList.remove('ShowMenu')
+    }
 })
 
 // Counter Animation Function
@@ -67,7 +92,8 @@ const slides = [
 let currentSlide = 0;
 
 navDots.forEach(dot => {
-    dot.addEventListener('click', function() {
+    dot.addEventListener('click', function(e) {
+        e.preventDefault();
         currentSlide = parseInt(this.getAttribute('data-slide'));
         updateSlider();
     });
@@ -156,7 +182,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                     block: 'start'
                 });
                 // Close mobile menu if open
-                document.querySelector('.menu').classList.remove('ShowMenu');
+                menu.classList.remove('ShowMenu');
             }
         }
     });
