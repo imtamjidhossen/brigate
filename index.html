@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brigate - Construction & Architecture Services</title>
     <script src="https://kit.fontawesome.com/a0739028e7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="assets/css/responsive.css" type="text/css">
@@ -33,7 +35,6 @@
             <div class="container">
                 <div class="MenuBarWraper">
                     <div class="logo">
-
                         <a href="#"><img src="assets/Img/logo.svg" alt="logo"></a>
                     </div>
                     <div class="mobileMenu">
@@ -41,7 +42,7 @@
                     </div>
                     <div class="menu">
                         <ul class="MenuItem">
-                            <li class="dropdown"><a href="#" id="active">Home </a>
+                            <li class="dropdown"><a href="#" id="active">Home</a>
                                 <ul class="submenu">
                                     <li><a href="#">Home1</a></li>
                                     <li><a href="#">Home2</a></li>
@@ -49,11 +50,11 @@
                                     <li><a href="#">Home4</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="#">Pages </i></a>
+                            <li class="dropdown"><a href="#">Pages</a>
                                 <ul class="submenu">
                                     <li><a href="#">About Company</a></li>
                                     <li><a href="#">Testimonials</a></li>
-                                    <li><a href="#">FAQ’s</a></li>
+                                    <li><a href="#">FAQ's</a></li>
                                     <li><a href="#">404 Page</a></li>
                                     <li><a href="#">Teams</a></li>
                                     <li><a href="#">Typography</a></li>
@@ -68,19 +69,19 @@
                                     <li><a href="#">Counter And Countdown</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="#">Services </a>
+                            <li class="dropdown"><a href="#">Services</a>
                                 <ul class="submenu">
                                     <li><a href="#">Services</a></li>
                                     <li><a href="#">Services Detail</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="#">Projects </a>
+                            <li class="dropdown"><a href="#">Projects</a>
                                 <ul class="submenu">
                                     <li><a href="#">Project</a></li>
                                     <li><a href="#">Project Detail</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="#">Blog </a>
+                            <li class="dropdown"><a href="#">Blog</a>
                                 <ul class="submenu">
                                     <li><a href="#">Blog Default</a></li>
                                     <li><a href="#">Blog With Sidebar</a></li>
@@ -107,16 +108,16 @@
                 <button id="sliderbutton">WORK WITH US</button>
             </div>
             <div class="slidernav">
-                <span></span>
-                <span></span>
+                <span class="nav-dot active" data-slide="0"></span>
+                <span class="nav-dot" data-slide="1"></span>
             </div>
         </div>
     </section>
     <!-- Slider area end -->
-    <!-- Service area star -->
+    <!-- Service area start -->
     <section id="service">
         <div class="container">
-            <div calss="sboxwraper">
+            <div class="sboxwraper">
                 <div class="singlesbox">
                     <div class="sboxicon"><i class="fas fa-drafting-compass"></i></div>
                     <div class="sboxTetle">
@@ -179,7 +180,7 @@
                         <ul class="teamleftul">
                             <li><a href="#"><i class="fas fa-greater-than"></i> Building Quality</a></li>
                             <li><a href="#"><i class="fas fa-greater-than"></i> Honest Advisors</a></li>
-                            <li><a href="#"><i class="fas fa-greater-than"></i> 24/1week Supports</a></li>
+                            <li><a href="#"><i class="fas fa-greater-than"></i> 24/7 week Supports</a></li>
                         </ul>
                         <ul class="teamrightul">
                             <li><a href="#"><i class="fas fa-greater-than"></i> Performances Team</a></li>
@@ -202,25 +203,25 @@
                 <div class="singleicon">
                     <div class="sicon">
                         <i class="fas fa-paint-roller"></i></div>
-                    <h2>1200</h2>
+                    <h2 class="counter" data-target="1200">0</h2>
                     <h4>HAPPINESS CUSTOMERS</h4>
                 </div>
                 <div class="singleicon">
                     <div class="sicon">
                         <i class="fas fa-tasks"></i></div>
-                    <h2>2800</h2>
+                    <h2 class="counter" data-target="2800">0</h2>
                     <h4>PROJECTS COMPLETED</h4>
                 </div>
                 <div class="singleicon">
                     <div class="sicon">
-                        <i class="fas fa-globe-americas"></i></i></div>
-                    <h2>4080</h2>
+                        <i class="fas fa-globe-americas"></i></div>
+                    <h2 class="counter" data-target="4080">0</h2>
                     <h4>WORLD BRANCHES</h4>
                 </div>
                 <div class="singleicon">
                     <div class="sicon">
                         <i class="far fa-smile-beam"></i></div>
-                    <h2>100</h2>
+                    <h2 class="counter" data-target="100">0</h2>
                     <h4>SPECIAL WINNER</h4>
                 </div>
             </div>
@@ -290,7 +291,7 @@
                         <li><i class="fas fa-check"></i> Unlimited Project</li>
                         <li><i class="fas fa-check"></i> Build with longer terms</li>
                     </ul>
-                    <button id="tablebutton">GET STARTED</button>
+                    <button class="tablebutton">GET STARTED</button>
                 </div>
                 <div class="singletable">
                     <h3>PRO</h3>
@@ -304,7 +305,7 @@
                         <li><i class="fas fa-check"></i> Unlimited Project</li>
                         <li><i class="fas fa-check"></i> Build with longer terms</li>
                     </ul>
-                    <button id="tablebutton">GET STARTED</button>
+                    <button class="tablebutton">GET STARTED</button>
                 </div>
                 <div class="singletable">
                     <h3>PREMIUM</h3>
@@ -318,7 +319,7 @@
                         <li><i class="fas fa-check"></i> Unlimited Project</li>
                         <li><i class="fas fa-check"></i> Build with longer terms</li>
                     </ul>
-                    <button id="tablebutton">GET STARTED</button>
+                    <button class="tablebutton">GET STARTED</button>
                 </div>
             </div>
         </div>
@@ -452,7 +453,7 @@
                             <p>Construction</p>
                             <h3>DISCUSSION TO MAKE A BETTER PROJECT PLAN</h3>
                         </div>
-                        <a href="#" id="learnmorebtn"> Learn More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="learnmorebtn"> Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="singlePbox">
@@ -462,7 +463,7 @@
                             <p>Repair</p>
                             <h3>DESIGN YOUR INTERIOR HOUSE ONLINE FREE</h3>
                         </div>
-                        <a href="#" id="learnmorebtn"> Learn More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="learnmorebtn"> Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="singlePbox">
@@ -472,7 +473,7 @@
                             <p>Hospital</p>
                             <h3>WE USE QUALITY MATERIAL TO BUILD FOR YOU</h3>
                         </div>
-                        <a href="#" id="learnmorebtn"> Learn More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="learnmorebtn"> Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="singlePbox">
@@ -482,7 +483,7 @@
                             <p>School</p>
                             <h3>YOUR PROJECT WILL CLEAN AND BEST QUALITY</h3>
                         </div>
-                        <a href="#" id="learnmorebtn"> Learn More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="learnmorebtn"> Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="singlePbox">
@@ -492,7 +493,7 @@
                             <p>House</p>
                             <h3>MASTER PLAN OF PROJECT IN THE YOUR CITY</h3>
                         </div>
-                        <a href="#" id="learnmorebtn"> Learn More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="learnmorebtn"> Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="singlePbox">
@@ -502,7 +503,7 @@
                             <p>Interior</p>
                             <h3>ARCHITECTURE AND ENGINEERING ARE TOGETHER</h3>
                         </div>
-                        <a href="#" id="learnmorebtn"> Learn More <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="learnmorebtn"> Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -511,7 +512,7 @@
     <!-- OUR PROJECTS area end -->
     <!-- OUR NEWS area start -->
     <section id="ournews">
-        <div Class="container">
+        <div class="container">
             <div class="service2title">
                 <h2>OUR LATEST NEWS</h2>
                 <p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet
@@ -533,7 +534,7 @@
                             </a>
                             <p>Aliquam erat volutpat. Suspendisse Suspen vulput port condimentum. vulput porttitor
                                 condimentum.</p>
-                            <a href="#" id="readmorebtn"> Read More <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="readmorebtn"> Read More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -552,7 +553,7 @@
                             </a>
                             <p>Aliquam erat volutpat. Suspendisse Suspen vulput port condimentum. vulput porttitor
                                 condimentum.</p>
-                            <a href="#" id="readmorebtn"> Read More <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="readmorebtn"> Read More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -571,7 +572,7 @@
                             </a>
                             <p>Aliquam erat volutpat. Suspendisse Suspen vulput port condimentum. vulput porttitor
                                 condimentum.</p>
-                            <a href="#" id="readmorebtn"> Read More <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="readmorebtn"> Read More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -586,8 +587,8 @@
                 <div class="singleNbox">
                     <h2>SUBSCRIBE NOW</h2>
                     <div class="newsinputbox">
-                        <input type="text" placeholder="Enter your e-mail">
-                        <input id="newssubmit" type="submit" value="Submit">
+                        <input type="email" placeholder="Enter your e-mail" required>
+                        <input class="newssubmit" type="submit" value="Submit">
                     </div>
                 </div>
                 <div class="singleNbox">
@@ -613,7 +614,7 @@
     <footer id="footer">
         <div class="container">
             <div class="fboxwraper">
-                <div Class="fboxs">
+                <div class="fboxs">
                     <h3>ABOUT US</h3>
                     <p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem.
                         Donec vehicula luctus nunc in laoreet.</p>
@@ -627,17 +628,17 @@
                 </div>
                 <div class="fboxs">
                     <h3>CONTACT US</h3>
-                    <span id="contact"><i class="fas fa-home"></i> Raffles Avenue, Singapore</span><span id="contact2">
+                    <span class="contact"><i class="fas fa-home"></i> Raffles Avenue, Singapore</span><span class="contact2">
                         Flyer, Singapore</span>
-                    <span id="contact"><i class="fas fa-phone"></i> +(98) 888 7777</span><span id="contact2">+(12)
+                    <span class="contact"><i class="fas fa-phone"></i> +(98) 888 7777</span><span class="contact2">+(12)
                         999 22333</span>
-                    <span id="contact"><i class="fas fa-envelope"></i> sample-email@example.com</span><span
-                        id="contact2">myinfo@example.com</span>
+                    <span class="contact"><i class="fas fa-envelope"></i> sample-email@example.com</span><span
+                        class="contact2">myinfo@example.com</span>
                 </div>
                 <div class="fboxs">
                     <h3>USEFULL LINKS</h3>
                     <div class="linksMenu">
-                        <ul id="uflinks">
+                        <ul class="uflinks">
                             <li><a href="#"><i class="fas fa-greater-than"></i>Home</a></li>
                             <li><a href="#"><i class="fas fa-greater-than"></i>About Us</a></li>
                             <li><a href="#"><i class="fas fa-greater-than"></i>Services</a></li>
@@ -649,7 +650,7 @@
                 <div class="fboxs">
                     <h3>RECENT POST</h3>
                     <div class="frpost">
-                        <div class="frpostmeta"><strong id="date">24</strong>
+                        <div class="frpostmeta"><strong class="date">24</strong>
                             <span>APRIL 2019</span></div>
                         <div class="frpostTitle">
                             <a href="#">
@@ -660,7 +661,7 @@
                         </div>
                     </div>
                     <div class="frpost">
-                        <div class="frpostmeta"><strong id="date">24</strong>
+                        <div class="frpostmeta"><strong class="date">24</strong>
                             <span>APRIL 2019</span></div>
                         <div class="frpostTitle">
                             <a href="#">
@@ -672,7 +673,6 @@
                     </div>
                 </div>
             </div>
-        </div>
         </div>
         <div class="copyrightcontainer">
             <div class="container">
